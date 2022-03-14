@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Booking</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+
+	<link type="text/css" rel="stylesheet" href="style2.css" />
+</head>
+
+<body>
+	<script type="text/javascript">
+	function checkField1()
+	{
+		var pass = document.getElementById("passfield").value;
+		if(pass.length >= 6 && pass.length <= 10)
+		alert("Password Accepted");
+		else
+		alert("Please use 6-10 characters");	
+	}
+	function checkField2()
+	{
+		var pass = document.getElementById("namefield").value;
+		if(pass.length < 1)
+		alert("Please enter your name!");
+	}
+	function checkField3()
+	{
+		var pass = document.getElementById("efield").value;
+		if(pass.length < 1)
+		alert("Please enter your email!");
+	}
+	</script>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-md-push-5">
+						<div class="booking-cta">
+							<h1>Make your reservation</h1>
+							<p>Choose from our range of packages.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-md-pull-7">
+						<div class="booking-form">
+							<form action="credit form.html">
+								<div class="form-group">
+									<span class="form-label" id="message2">Userame</span>
+									<input class="form-control" type="name" id="namefield" onblur="checkField2();" pattern="[a-z]"required>
+									<span class="form-label">E-mail</span>
+									<input class="form-control" type="email" id="efield" onblur="checkField3();"required>
+									<span class="form-label" id="message1">Password</span>
+									<input class="form-control" type="password" id="passfield" pattern="[a-z]{6}" onblur="checkField1();"required>
+									<span class="form-label">Choose your package</span>
+										  <select id="cars" name="cars" class="form-control">
+										    <option value="Chadar Trek">Chadar Trek</option>
+										    <option value="Triund">Triund Trek</option>
+										    <option value="Kheerganga Trek">Kheerganga Trek</option>
+										    <option value="goa">Goa Honeymoon Package</option>
+										    <option value="andaman">Andaman Honeymoon Package</option>
+										    <span class="select-arrow"></span>
+										  </select>
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Date</span>
+											<input class="form-control" type="date" required>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="form-group">
+											<span class="form-label">Adults</span>
+											<select class="form-control">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+											</select>
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="form-group">
+											<span class="form-label">Children</span>
+											<select class="form-control">
+												<option>0</option>
+												<option>1</option>
+												<option>2</option>
+											</select>
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-btn">
+									<button class="submit-btn">Proceed to Payment Gateway</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
